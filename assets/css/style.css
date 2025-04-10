@@ -1,0 +1,113 @@
+
+/* === GLOBAL === */
+body {
+  
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #25275e;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #d9005d;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #25275e;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* === NAVBAR === */
+.navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* above most elements */
+  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-subtext {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #09420c;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* === BUTTONS === */
+.btn-rounded {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-approach {
+  background-color: #09420c;
+  color: white;
+}
+
+.btn-approach:hover {
+  background-color: #d9005d;
+}
+
+.btn-prism {
+  background-color: #d9005d;
+  color: white;
+}
+
+.btn-prism:hover {
+  background-color: #b2004e;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #25275e;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #d9005d;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar-center {
+    order: 3;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
