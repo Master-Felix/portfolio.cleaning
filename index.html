@@ -25,7 +25,6 @@
 
   <nav class="navbar navbar-custom d-flex justify-content-between align-items-center">
     <!-- Left Button -->
-    <!-- <button class="btn btn-rounded btn-approach">Our Approach</button> -->
     <button class="btn btn-rounded btn-approach" data-bs-toggle="modal" data-bs-target="#approachModal">Our
       Approach</button>
 
@@ -39,12 +38,17 @@
     </div>
 
     <!-- Right side: PRISM Button and Hamburger -->
-    <div class="d-flex align-items-center gap-3">
+    <div class="d-flex align-items-center gap-3 position-relative">
       <button class="btn btn-rounded btn-prism text-uppercase">Matxo Ltd</button>
-      <div class="hamburger">
-        &#9776;
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <div class="nav-menu" id="navMenu">
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact Us</a>
       </div>
     </div>
+
   </nav>
 
   <!-- Modal -->
@@ -166,6 +170,17 @@
     </div>
 
   </section>
+
+
+  <!-- About section -->
+  <section id="about">...</section>
+  <!-- Services Section -->
+  <section id="services">...</section>
+  <!-- Team Section -->
+  <section id="team">...</section>
+  <!-- Contact section -->
+  <section id="contact">...</section>
+
 
 
   <!-- Footer -->
