@@ -52,3 +52,21 @@ const changeSlider = () => {
 let autoPlay = setInterval(() => {
     next.click();
 }, 5000);
+
+
+// hamburger Menu
+
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+
+  document.addEventListener("click", function (e) {
+    const menu = document.getElementById("navMenu");
+    const hamburger = document.querySelector(".hamburger");
+
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+
