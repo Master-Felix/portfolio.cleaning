@@ -1,25 +1,15 @@
 /* === GLOBAL === */
-body {
-  
-  font-family: "Montserrat", sans-serif;
-  background-color: #ffffff;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+  :root {
+      --border-color: #fff5;
+      --w-image: 500px;
+      --calculate: 1.5;
+    }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-}
-
-:root{
-  --border-color: #fff5;
-  --w-image: 500px;
-  --calculate: calc(3 / 2);
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
 html {
   scroll-behavior: smooth;
@@ -381,5 +371,4 @@ footer a:hover {
     text-align: center;
     margin-top: 1rem;
   }
-}
 }
