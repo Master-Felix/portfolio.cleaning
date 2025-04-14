@@ -16,7 +16,7 @@ html {
 }
 
 a {
-  color: #25275e;
+  color: #09420c;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -28,7 +28,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #25275e;
+  color: #09420c;
 }
 
 p {
@@ -398,6 +398,10 @@ p {
       left: 50%;
       justify-content: center;
   }
+}
+
+.text-matxo-green {
+  color: #09420c;
 }
 
 /* === FOOTER === */
