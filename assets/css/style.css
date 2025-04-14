@@ -400,9 +400,32 @@ p {
   }
 }
 
+/* About Us */
 .text-matxo-green {
   color: #09420c;
 }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+}
+
+#about h5 {
+  text-align: center;
+}
+
+
 
 /* === FOOTER === */
 footer {
