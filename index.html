@@ -1,291 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Professional cleaning services by Matxo Ltd. Offering facade cleaning, window cleaning, hydro-jet drain cleaning, and solar panel maintenance." />
+    <title>Cleaning . Matxo</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" crossorigin />
+    
+    <!-- Stylesheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cleaning . Matxo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <body>
+    <nav
+      class="navbar navbar-custom d-flex justify-content-between align-items-center"
+    >
+      <!-- Left Button -->
+      <button
+        class="btn btn-rounded btn-approach"
+        data-bs-toggle="modal"
+        data-bs-target="#approachModal"
+      >
+        Our Approach
+      </button>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="./assets/css/all.min.css" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-
-  <nav class="navbar navbar-custom d-flex justify-content-between align-items-center">
-    <!-- Left Button -->
-    <button class="btn btn-rounded btn-approach" data-bs-toggle="modal" data-bs-target="#approachModal">Our
-      Approach</button>
-
-    <!-- Logo Centered -->
-    <div class="text-center">
-      <div class="navbar-logo">
-        <span style="font-weight: 400;">Mat</span><span style="color: #d9005d;">xo</span><span
-          style="font-weight: 400;">&nbsp;Ltd</span>
-      </div>
-      <div class="logo-subtext text-uppercase fw-bold">Quality Will Never Be an accident</div>
-    </div>
-
-    <!-- Right side: PRISM Button and Hamburger -->
-    <div class="d-flex align-items-center gap-3 position-relative">
-      <button class="btn btn-rounded btn-prism text-uppercase">Matxo Ltd</button>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-      <div class="nav-menu" id="navMenu">
-        <a href="#about">About Us</a>
-        <a href="#services">Our Services</a>
-        <a href="#team">Our Team</a>
-        <a href="#contact">Contact Us</a>
-      </div>
-    </div>
-
-  </nav>
-
-  <!-- Modal -->
-  <div class="modal fade" id="approachModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content p-4 rounded-4 shadow">
-        <div class="modal-header border-0">
-          <h5 class="modal-title fw-bold text-success">Our Approach</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      <!-- Logo Centered -->
+      <div class="text-center">
+        <div class="navbar-logo">
+          <span style="font-weight: 400">Mat</span
+          ><span style="color: #d9005d">xo</span
+          ><span style="font-weight: 400">&nbsp;Ltd</span>
         </div>
-        <div class="modal-body">
-          <p>
-            At Matxo Cleaning Ltd., our approach is simple — <strong>professionalism, reliability, and eco-conscious
-              service</strong>. We tailor our cleaning solutions to meet your unique needs, whether residential,
-            commercial, or industrial.
-          </p>
-          <p>
-            Our skilled team uses modern tools and safe, effective products to ensure spotless results. We value
-            <strong>trust, transparency, and consistent quality</strong> in every job.
-          </p>
-          <p>
-            Your space is more than just a place — it’s a reflection of you. Let us help you keep it fresh, clean, and
-            welcoming.
-          </p>
+        <div class="logo-subtext text-uppercase fw-bold">
+          Quality Will Never Be an accident
         </div>
       </div>
-    </div>
-  </div>
 
+      <!-- Right side: PRISM Button and Hamburger -->
+      <div class="d-flex align-items-center gap-3 position-relative">
+        <button class="btn btn-rounded btn-prism text-uppercase">
+          Matxo Ltd
+        </button>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">&#9776;</button>
+        <div class="nav-menu" id="navMenu">
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#team">Our Team</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </nav>
 
-  <section class="carousel next">
-    <div class="list">
-      <article class="item other_1">
-        <div class="main-content" style="background-color: #9c4d2f;">
-          <div class="content">
-            <h4>Facade/High Level Window Cleaning</h4>
-            <p class="description">
-              We provide window cleaning services for
-              both internal and external glass at both hand
-              height and high level, using our experienced
-              window cleaners and professional equipment.
-              Our services include cleaning windows, glass
-              lifts, glass doors, glass roofs and canopies
-              and other glass surfaces.
+    <!-- Modal -->
+    <div class="modal fade" id="approachModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 rounded-4 shadow">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold text-success">Our Approach</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              At Matxo Cleaning Ltd., our approach is simple —
+              <strong
+                >professionalism, reliability, and eco-conscious service</strong
+              >. We tailor our cleaning solutions to meet your unique needs,
+              whether residential, commercial, or industrial.
+            </p>
+            <p>
+              Our skilled team uses modern tools and safe, effective products to
+              ensure spotless results. We value
+              <strong>trust, transparency, and consistent quality</strong> in
+              every job.
+            </p>
+            <p>
+              Your space is more than just a place — it’s a reflection of you.
+              Let us help you keep it fresh, clean, and welcoming.
             </p>
           </div>
         </div>
-        <figure class="image">
-          <img src="./assets/img/facade.jpg" alt="">
-          <figcaption>Facade/High Level Window Cleaning</figcaption>
-        </figure>
-      </article>
-
-      <article class="item active">
-        <div class="main-content" style="background-color: #f5bfaf;">
-          <div class="content">
-            <h4>Hydro-jet Drain Cleaning</h4>
-            <p class="description">
-              Hydro-jetting is one of the safest and most
-              effective ways to clean the drain. The
-              benefits of hydro jet cleaning is that it's
-              environmentally friendly. No chemicals
-              are used that might end up in the
-              environment or, worse, damage your
-              pipes.
-            </p>
-          </div>
-        </div>
-        <figure class="image">
-          <img src="./assets/img/hydro-jet.jpg" alt="">
-          <figcaption>Hydro-jet Drain Cleaning</figcaption>
-        </figure>
-      </article>
-
-
-      <article class="item other_2">
-        <div class="main-content" style="background-color: #dedfe1;">
-          <div class="content">
-            <h4>Solar Panel Cleaning and Maintenance</h4>
-            <p class="description">
-              MCSC cleans solar panels like no other
-              company, offering state-of-the-art automatic
-              systems that configure for your specific
-              soiling environment and feature security
-              fasteners and other anti-theft devices. Our
-              products are available for both residential
-              and commercial use.
-            </p>
-          </div>
-        </div>
-        <figure class="image">
-          <img src="./assets/img/solar-panel.jpg" alt="">
-          <figcaption>Solar Panel Cleaning and Maintenance</figcaption>
-        </figure>
-      </article>
-
-      <article class="item">
-        <div class="main-content" style="background-color: #7eb63d;">
-          <div class="content">
-            <h4>Ventilation Cleaning Services</h4>
-            <p class="description">
-              Our certified technicians meticulously
-              inspect, calibrate and balance ventilation
-              systems. Regular maintenance safeguards
-              occupant health, regulatory compliance
-              and building efficiency.
-            </p>
-          </div>
-        </div>
-        <figure class="image">
-          <img src="./assets/img/dryer-vent-cleaning.jpg" alt="">
-          <figcaption>Ventilation Cleaning Services</figcaption>
-        </figure>
-      </article>
-    </div>
-    <div class="arrows">
-      <button id="prev" class="arrow-btn" aria-label="Previous">&#8249;</button>
-      <button id="next" class="arrow-btn" aria-label="Next">&#8250;</button>
+      </div>
     </div>
 
-  </section>
-
-
-  <!-- About section -->
-  <section id="about" class="py-5 position-relative text-white" style="background: url('./assets/img/crew.jpg') no-repeat center center / cover;">
-
-    <!-- Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.6); z-index: 1;"></div>
-  
-    <!-- Content -->
-    <div class="container position-relative z-2">
-      <h1 class="text-center mb-5 text-white">About Us</h1>
-  
-      <div class="row mb-4">
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow bg-light text-dark">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">Our Vision</h5>
-              <p>
-                To be the leading, customer-service oriented company in providing industrial cleaning & equipment maintenance solutions to our customer’s satisfaction and specification.
+    <section class="carousel next">
+      <div class="list">
+        <article class="item other_1">
+          <div class="main-content" style="background-color: #9c4d2f">
+            <div class="content">
+              <h4>Facade/High Level Window Cleaning</h4>
+              <p class="description">
+                We provide window cleaning services for both internal and
+                external glass at both hand height and high level, using our
+                experienced window cleaners and professional equipment. Our
+                services include cleaning windows, glass lifts, glass doors,
+                glass roofs and canopies and other glass surfaces.
               </p>
             </div>
           </div>
-        </div>
-  
-        <div class="col-md-6 mb-4">
-          <div class="card h-100 shadow bg-light text-dark">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">Our Mission</h5>
-              <p>
-                Our aim is to offer professional & internationally certified standards in all kinds of industrial cleaning, maintenance, waterproofing, and related services to our customers, in the most convenient, competitive, and affordable comportment.
+          <figure class="image">
+            <img src="./assets/img/facade.jpg" alt="Facade and high level window cleaning service" loading="lazy" />
+            <figcaption>Facade/High Level Window Cleaning</figcaption>
+          </figure>
+        </article>
+
+        <article class="item active">
+          <div class="main-content" style="background-color: #f5bfaf">
+            <div class="content">
+              <h4>Hydro-jet Drain Cleaning</h4>
+              <p class="description">
+                Hydro-jetting is one of the safest and most effective ways to
+                clean the drain. The benefits of hydro jet cleaning is that it's
+                environmentally friendly. No chemicals are used that might end
+                up in the environment or, worse, damage your pipes.
               </p>
-              <p class="fw-bold mb-0">Our motto: <em>“Quality will never be an Accident”</em></p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="./assets/img/hydro-jet.jpg" alt="Hydro-jet drain cleaning service" loading="lazy" />
+            <figcaption>Hydro-jet Drain Cleaning</figcaption>
+          </figure>
+        </article>
+
+        <article class="item other_2">
+          <div class="main-content" style="background-color: #dedfe1">
+            <div class="content">
+              <h4>Solar Panel Cleaning and Maintenance</h4>
+              <p class="description">
+                MCSC cleans solar panels like no other company, offering
+                state-of-the-art automatic systems that configure for your
+                specific soiling environment and feature security fasteners and
+                other anti-theft devices. Our products are available for both
+                residential and commercial use.
+              </p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="./assets/img/solar-panel.jpg" alt="Solar panel cleaning and maintenance service" loading="lazy" />
+            <figcaption>Solar Panel Cleaning and Maintenance</figcaption>
+          </figure>
+        </article>
+
+        <article class="item">
+          <div class="main-content" style="background-color: #7eb63d">
+            <div class="content">
+              <h4>Ventilation Cleaning Services</h4>
+              <p class="description">
+                Our certified technicians meticulously inspect, calibrate and
+                balance ventilation systems. Regular maintenance safeguards
+                occupant health, regulatory compliance and building efficiency.
+              </p>
+            </div>
+          </div>
+          <figure class="image">
+            <img src="./assets/img/dryer-vent-cleaning.jpg" alt="Ventilation cleaning service" loading="lazy" />
+            <figcaption>Ventilation Cleaning Services</figcaption>
+          </figure>
+        </article>
+      </div>
+      <div class="arrows">
+        <button id="prev" class="arrow-btn" aria-label="Previous">
+          &#8249;
+        </button>
+        <button id="next" class="arrow-btn" aria-label="Next">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section
+      id="about"
+      class="py-5 position-relative text-white"
+      style="
+        background: url('./assets/img/crew.jpg') no-repeat center center / cover;
+      "
+    >
+      <!-- Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-color: rgba(0, 0, 0, 0.6); z-index: 1"
+      ></div>
+
+      <!-- Content -->
+      <div class="container position-relative z-2">
+        <h1 class="text-center mb-5 text-white">About Us</h1>
+
+        <div class="row mb-4">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow bg-light text-dark">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">Our Vision</h5>
+                <p>
+                  To be the leading, customer-service oriented company in
+                  providing industrial cleaning & equipment maintenance
+                  solutions to our customer’s satisfaction and specification.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow bg-light text-dark">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">Our Mission</h5>
+                <p>
+                  Our aim is to offer professional & internationally certified
+                  standards in all kinds of industrial cleaning, maintenance,
+                  waterproofing, and related services to our customers, in the
+                  most convenient, competitive, and affordable comportment.
+                </p>
+                <p class="fw-bold mb-0">
+                  Our motto: <em>“Quality will never be an Accident”</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h4 text-center text-white mb-4">Our Core Values</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 bg-light text-dark border-0 shadow">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">EFFICACY</h5>
+                <p>
+                  Using the most appropriate cleaning methods and solutions for
+                  each task. Minimizing disruption to your operations.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 bg-light text-dark border-0 shadow">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">CAUTION</h5>
+                <p>
+                  Prioritizing the safety of both Matxo's staff and your
+                  personnel. Implementing thorough risk assessments before
+                  commencing work.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 bg-light text-dark border-0 shadow">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">
+                  CUSTOMER SATISFACTION
+                </h5>
+                <p>
+                  Tailoring cleaning and maintenance plans to your specific
+                  needs. Maintaining open communication throughout the project
+                  lifecycle.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 bg-light text-dark border-0 shadow">
+              <div class="card-body">
+                <h5 class="card-title text-matxo-green">HONESTY & INTEGRITY</h5>
+                <p>
+                  Providing accurate quotes, being upfront about challenges, and
+                  building trust through professionalism and transparency.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-  
-      <h2 class="h4 text-center text-white mb-4">Our Core Values</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 bg-light text-dark border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">EFFICACY</h5>
-              <p>Using the most appropriate cleaning methods and solutions for each task. Minimizing disruption to your operations.</p>
-            </div>
-          </div>
+    </section>
+
+    <!-- End About Us -->
+    <!-- Services Section -->
+    <section id="services"></section>
+    <!-- Team Section -->
+    <section id="team"></section>
+    <!-- Contact section -->
+    <section id="contact"></section>
+
+    <!-- Footer -->
+    <footer class="footer text-center text-white">
+      <div class="container py-4">
+        <p class="mb-2">&copy; 2025 Matxo Cleaning. All rights reserved.</p>
+        <div class="social-icons d-flex justify-content-center gap-4 mb-3">
+          <a href="https://facebook.com" target="_blank" class="text-white fs-4"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank" class="text-white fs-4"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-white fs-4"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank" class="text-white fs-4"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
         </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 bg-light text-dark border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">CAUTION</h5>
-              <p>Prioritizing the safety of both Matxo's staff and your personnel. Implementing thorough risk assessments before commencing work.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 bg-light text-dark border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">CUSTOMER SATISFACTION</h5>
-              <p>Tailoring cleaning and maintenance plans to your specific needs. Maintaining open communication throughout the project lifecycle.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card h-100 bg-light text-dark border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title text-matxo-green">HONESTY & INTEGRITY</h5>
-              <p>Providing accurate quotes, being upfront about challenges, and building trust through professionalism and transparency.</p>
-            </div>
-          </div>
-        </div>
+        <p>
+          <a href="#" class="text-white text-decoration-underline"
+            >Privacy Policy</a
+          >
+          |
+          <a href="#" class="text-white text-decoration-underline"
+            >Terms of Service</a
+          >
+        </p>
       </div>
-    </div>
-  </section>
-  
-  
-  <!-- End About Us -->
-  <!-- Services Section -->
-  <section id="services"></section>
-  <!-- Team Section -->
-  <section id="team"></section>
-  <!-- Contact section -->
-  <section id="contact"></section>
+    </footer>
+    <!-- End Footer -->
 
-
-
-  <!-- Footer -->
-  <footer class="footer text-center text-white">
-    <div class="container py-4">
-      <p class="mb-2">&copy; 2025 Matxo Cleaning. All rights reserved.</p>
-      <div class="social-icons d-flex justify-content-center gap-4 mb-3">
-        <a href="https://facebook.com" target="_blank" class="text-white fs-4"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://twitter.com" target="_blank" class="text-white fs-4"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://instagram.com" target="_blank" class="text-white fs-4"><i
-            class="fa-brands fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="text-white fs-4"><i
-            class="fa-brands fa-linkedin-in"></i></a>
-      </div>
-      <p>
-        <a href="#" class="text-white text-decoration-underline">Privacy Policy</a> |
-        <a href="#" class="text-white text-decoration-underline">Terms of Service</a>
-      </p>
-    </div>
-  </footer>
-  <!-- End Footer -->
-
-  <script src="./assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
-    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script defer src="./assets/js/script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
