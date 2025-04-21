@@ -1,3 +1,106 @@
+// Testimonials slider functionality
+class TestimonialsSlider {
+    constructor() {
+        this.slider = document.querySelector('.testimonials-slider');
+        this.track = document.querySelector('.testimonials-track');
+        this.slides = document.querySelectorAll('.testimonial-card');
+        this.prevBtn = document.querySelector('.prev-arrow');
+        this.nextBtn = document.querySelector('.next-arrow');
+        this.dotsContainer = document.querySelector('.slider-dots');
+
+        this.currentIndex = 0;
+        this.slideWidth = 100; // 100%
+        this.slidesLength = this.slides.length;
+
+        this.init();
+    }
+
+    init() {
+        // Create dots
+        this.slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            dot.addEventListener('click', () => this.goToSlide(index));
+            this.dotsContainer.appendChild(dot);
+        });
+
+        // Set initial state
+        this.updateDots();
+        this.slides.forEach(slide => slide.style.flex = `0 0 ${this.slideWidth}%`);
+        this.track.style.width = `${this.slideWidth * this.slidesLength}%`;
+
+        // Add event listeners
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+        // Touch events
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        this.slider.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        this.slider.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe(touchStartX, touchEndX);
+        }, { passive: true });
+
+        // Auto play
+        this.startAutoPlay();
+    }
+
+    handleSwipe(startX, endX) {
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) { // Minimum swipe distance
+            if (diff > 0) {
+                this.nextSlide();
+            } else {
+                this.prevSlide();
+            }
+        }
+    }
+
+    goToSlide(index) {
+        this.currentIndex = index;
+        this.updateSlider();
+    }
+
+    prevSlide() {
+        this.currentIndex = (this.currentIndex - 1 + this.slidesLength) % this.slidesLength;
+        this.updateSlider();
+    }
+
+    nextSlide() {
+        this.currentIndex = (this.currentIndex + 1) % this.slidesLength;
+        this.updateSlider();
+    }
+
+    updateSlider() {
+        const offset = -this.currentIndex * this.slideWidth;
+        this.track.style.transform = `translateX(${offset}%)`;
+        this.updateDots();
+        this.resetAutoPlay();
+    }
+
+    updateDots() {
+        const dots = this.dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+    }
+
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => this.nextSlide(), 5000);
+    }
+
+    resetAutoPlay() {
+        clearInterval(this.autoPlayInterval);
+        this.startAutoPlay();
+    }
+}
+
 // Initialize Bootstrap components when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Navbar scroll effect
@@ -19,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         updateNavbar();
     });
+
+    // Initialize testimonials slider
+    new TestimonialsSlider();
 
     // Initialize all service modals
     const serviceModals = [
