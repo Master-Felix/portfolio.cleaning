@@ -1,3 +1,9 @@
+/* ============================================
+   Matxo Cleaning Services Website
+   Main Stylesheet
+   ============================================ */
+
+/* ===== Variables ===== */
 :root {
   --primary-color: #1E7145;
   --primary-dark: #0D5032;
@@ -199,6 +205,7 @@ a:hover {
 }
 
 
+
 /* ===== Services Section ===== */
 .services-section {
     background: var(--primary-color);
@@ -329,6 +336,7 @@ a:hover {
     transform: translateX(5px);
 }
 
+
 /* ===== Hero Section ===== */
 .hero-section {
     background: url('../img/hero-banner.jpg') no-repeat center center / cover;
@@ -392,7 +400,9 @@ a:hover {
   animation: bounce 1.5s infinite;
 }
 
-/* ===== Modal Styles ===== */
+
+
+/* ===== Global Styles ===== */
 .modal-content {
     border: none;
     border-radius: 15px;
@@ -463,6 +473,27 @@ a:hover {
     transform: scale(1);
     opacity: 1;
 }
+
+
+/* ===== Navigation Section ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide {
+  animation: slideUp 1s ease-out 0.5s forwards;
+}
+
 
 /* ===== Contact Section ===== */
 .contact-section {
@@ -622,11 +653,6 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* ===== Animations ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -640,6 +666,7 @@ a:hover {
 .animate-slide {
   animation: slideUp 1s ease-out 0.5s forwards;
 }
+
 
 /* ===== About Section ===== */
 .about-section {
@@ -763,6 +790,7 @@ a:hover {
     margin: 0 !important;
   }
 }
+
 
 /* ===== Testimonials Section ===== */
 .testimonials-section {
@@ -957,6 +985,7 @@ a:hover {
         height: 30px;
     }
 }
+
 
 /* ===== Team Section ===== */
 .team-section {

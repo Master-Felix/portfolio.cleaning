@@ -1,4 +1,9 @@
-// Testimonials slider functionality
+/* ============================================
+   Matxo Cleaning Services Website
+   Main JavaScript
+   ============================================ */
+
+/* ===== Testimonials Slider ===== */
 class TestimonialsSlider {
     constructor() {
         this.slider = document.querySelector('.testimonials-slider');
@@ -101,9 +106,12 @@ class TestimonialsSlider {
     }
 }
 
-// Initialize Bootstrap components when the DOM is fully loaded
+
+/* ===== DOM Ready Initialization ===== */
+// Initialize components when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Navbar scroll effect
+    /* ===== Navbar Scroll Effect ===== */
+    // Update navbar on scroll
     const navbar = document.querySelector('.navbar');
     const scrollThreshold = 50;
 
@@ -123,9 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavbar();
     });
 
+    /* ===== Initialize Components ===== */
     // Initialize testimonials slider
     new TestimonialsSlider();
 
+    /* ===== Service Modals ===== */
     // Initialize all service modals
     const serviceModals = [
         'facadeModal',
@@ -171,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+/* ===== Form Handling ===== */
 // Handle quote form submission
 function handleQuoteSubmission(event) {
     event.preventDefault();
