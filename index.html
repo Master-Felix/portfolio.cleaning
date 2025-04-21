@@ -207,10 +207,6 @@
         </section>
     </main>
 
-    <footer class="text-center py-3">
-        <p>&copy; 2024 Matxo Cleaning Services & Care</p>
-    </footer>
-
     <!-- Service Modals -->
     <div class="modal fade" id="facadeModal" tabindex="-1" aria-labelledby="facadeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -428,6 +424,99 @@
             </div>
         </div>
     </div>
+
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get a Free Quote</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-form-wrapper">
+                        <form id="quoteForm" class="contact-form" onsubmit="return handleQuoteSubmission(event)">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="service" class="form-label">Service Required</label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>Select a service</option>
+                                        <option value="facade">Façade/High Level Window Cleaning</option>
+                                        <option value="hydrojet">Hydro-jet Drain Cleaning</option>
+                                        <option value="solarpanel">Solar Panel Cleaning</option>
+                                        <option value="ventilation">Ventilation Cleaning</option>
+                                        <option value="gas">Commercial Gas Installation</option>
+                                        <option value="tank">Tank Cleaning and Restoration</option>
+                                        <option value="waterproofing">Waterproofing</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Project Details</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="preferredDate" class="form-label">Preferred Service Date</label>
+                                <input type="date" class="form-control" id="preferredDate" name="preferredDate">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Request Quote</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-title">About Matxo</h5>
+                    <p class="footer-text">Professional cleaning services dedicated to excellence, safety, and customer satisfaction. Your trusted partner for all industrial cleaning needs.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Get a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +254 712 345 678</li>
+                        <li><i class="fas fa-envelope"></i> info@matxocleaning.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                    </ul>
+                    <div class="social-links mt-3">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2024 Matxo Cleaning Services & Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
