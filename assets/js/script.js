@@ -49,4 +49,63 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Auto-fill service when coming from a modal
+    const serviceSelect = document.getElementById('service');
+    document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(btn => {
+        if (btn.getAttribute('href') === '#contact') {
+            btn.addEventListener('click', function() {
+                const modalId = this.closest('.modal').id;
+                const service = modalId.replace('Modal', '');
+                setTimeout(() => {
+                    serviceSelect.value = service;
+                }, 100);
+            });
+        }
+    });
 });
+
+// Handle quote form submission
+function handleQuoteSubmission(event) {
+    event.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Validate phone number
+    const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+    if (!phoneRegex.test(data.phone)) {
+        alert('Please enter a valid phone number');
+        return false;
+    }
+    
+    // Validate date
+    if (data.preferredDate) {
+        const selectedDate = new Date(data.preferredDate);
+        const today = new Date();
+        if (selectedDate < today) {
+            alert('Please select a future date');
+            return false;
+        }
+    }
+
+    // Create success message
+    const form = event.target;
+    const successMessage = document.createElement('div');
+    successMessage.className = 'alert alert-success mt-3';
+    successMessage.innerHTML = `
+        <h4 class="alert-heading">Quote Request Received!</h4>
+        <p>Thank you ${data.name}, we've received your quote request for ${form.service.options[form.service.selectedIndex].text}.</p>
+        <p>We'll contact you within 24 hours at ${data.email} or ${data.phone} to discuss your project.</p>
+    `;
+
+    // Hide form and show success message
+    form.style.display = 'none';
+    form.parentNode.appendChild(successMessage);
+
+    // Optional: Reset form for future use
+    form.reset();
+
+    return false;
+}
